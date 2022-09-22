@@ -8,7 +8,7 @@ describe("GifItem tests", () => {
     const { container } = render(<GifItem title={title} url={url} />);
     expect(container).toMatchSnapshot();
   });
-
+  
   test("Debe de mostrar la imagen con la url indicada", () => {
     render(<GifItem title={title} url={url} />);
     expect(screen.getByRole("img").src).toBe(url);
@@ -18,4 +18,5 @@ describe("GifItem tests", () => {
     render(<GifItem title={title} url={url} />);
     expect(title).toBeTruthy();
   });
+  
 });

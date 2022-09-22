@@ -1,6 +1,7 @@
 import React from "react";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem } from "./GifItem";
+import PropTypes from "prop-types"
 
 export function GifGrid({ category }) {
   const { images, isLoading } = useFetchGifs(category);
@@ -16,4 +17,8 @@ export function GifGrid({ category }) {
       </div>
     </>
   );
+}
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
 }

@@ -10,4 +10,5 @@ describe("getGifs", () => {
       url: expect.any(String),
     });
   });
+
 });
